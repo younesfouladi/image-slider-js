@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Vazirmatn:wght@100..900&display=swap");
+
+:root,
+:root.dark {
+  --bg-color: #0a0a0a;
+  --color: #fefefe;
+  --yellow: #f2ff57;
+  --primary: #f2ff57;
+  font-size: 16px;
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Vazirmatn", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  background-color: var(--bg-color);
+  height: inherit;
+  width: inherit;
+  color: var(--color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  padding: 2rem 0;
+}
+
+#container .slider-container {
+  width: 100%;
+}
+
+#container .slider-container .images-container {
+  width: 5000px;
+  /* overflow: hidden; */
+}
+
+.slide {
+  width: 900px;
+  display: inline-block;
+  opacity: 0.4;
+}
+
+.slide img {
+  border-radius: 1rem;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/* .active-slide {
+  transform: scale(1.1);
+  margin: 0 3rem 0 3rem;
+  opacity: 1;
+} */
+
+/* .active-slide img {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+} */
