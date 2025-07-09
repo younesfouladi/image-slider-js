@@ -36,6 +36,7 @@ let mySlides = [];
   let currentSlide = 2;
   slidesBuilder();
   setImageOnDom();
+  changeBackground();
   // Slide Move by Click
   (function () {
     const leftSlide = document.querySelector(".left-slide-button");
@@ -53,7 +54,8 @@ let mySlides = [];
       imageWrapper.style.transform = `translateX(${offset}px)`;
       removeActiveClass();
       slides[currentSlide].classList.add("active-slide");
-      // Change title & texts based on active slides
+      changeBackground();
+      // Change Title/description base on active slide
       (() => {
         const title = document.querySelector(".game-name");
         const description = document.querySelector(".game-description");
@@ -137,5 +139,16 @@ function setImageOnDom() {
 function removeActiveClass() {
   document.querySelectorAll(".slide").forEach((slide) => {
     slide.classList.remove("active-slide");
+  });
+}
+
+function changeBackground() {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide, index) => {
+    if (slide.classList.contains("active-slide")) {
+      const container = document.getElementById("container");
+      container.style.background = `url("${mySlides[index].imageSrc}")`;
+      container.style.backgroundSize = "cover";
+    }
   });
 }
