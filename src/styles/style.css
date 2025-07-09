@@ -8,7 +8,6 @@
   --primary: #f2ff57;
   --gray: #707070;
   font-size: 16px;
-  /* font-family: "Inter", sans-serif; */
   font-family: "Inter", sans-serif;
 }
 
@@ -182,7 +181,6 @@ body {
   width: 1060px;
   display: flex;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
 }
 
 .switch-slide-container a {
