@@ -1,7 +1,7 @@
 {
-  "name": "project name",
+  "name": "Image Slider by Younes",
   "version": "1.0.0",
-  "description": "project description",
+  "description": "Modern Image Slider by Younes",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-user-name/your-project-name.git"
+    "url": "git+https://github.com/mehrabtahami/image-slider-js.git"
   },
   "keywords": [],
   "author": "younes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/your-user-name/your-project-name/issues"
+    "url": "https://github.com/mehrabtahami/image-slider-js/issues"
   },
-  "homepage": "https://github.com/your-user-name/your-project-name#readme",
+  "homepage": "https://github.com/mehrabtahami/image-slider-js#readme",
   "devDependencies": {
     "assert": "^2.1.0",
     "browserify-zlib": "^0.2.0",
@@ -46,4 +46,3 @@
     "webpack-dev-server": "^5.2.2"
   }
 }
-
