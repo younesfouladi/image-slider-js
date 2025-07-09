@@ -40,21 +40,21 @@ let mySlides = [];
   (function () {
     const leftSlide = document.querySelector(".left-slide-button");
     const rightSlide = document.querySelector(".right-slide-button");
-    document.addEventListener("click", (e) => {
-      //
-      function moveSlide(direction) {
-        // Check if we are on first or last Slide
-        currentSlide += direction;
-        if (currentSlide < 0) {
-          currentSlide = totalSlides - 1;
-        } else if (currentSlide >= totalSlides) {
-          currentSlide = 0;
-        }
-        const offset = (2 - currentSlide) * slideWidth; // 2 is our Main Slide on page oppening, so it should be 0px in transform, so we calculate each slide based on that middle slide which is 2
-        imageWrapper.style.transform = `translateX(${offset}px)`;
-        removeActiveClass();
-        slides[currentSlide].classList.add("active-slide");
+    //
+    function moveSlide(direction) {
+      // Check if we are on first or last Slide
+      currentSlide += direction;
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
       }
+      const offset = (2 - currentSlide) * slideWidth; // 2 is our Main Slide on page oppening, so it should be 0px in transform, so we calculate each slide based on that middle slide which is 2
+      imageWrapper.style.transform = `translateX(${offset}px)`;
+      removeActiveClass();
+      slides[currentSlide].classList.add("active-slide");
+    }
+    document.addEventListener("click", (e) => {
       switch (e.target) {
         case leftSlide:
           moveSlide(-1);
@@ -64,6 +64,9 @@ let mySlides = [];
           break;
       }
     });
+    setInterval(() => {
+      moveSlide(1);
+    }, 5000);
   })();
 })();
 
