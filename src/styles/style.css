@@ -144,6 +144,7 @@ body {
   grid-area: head;
   text-transform: uppercase;
   text-align: left;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .text-container p {
@@ -151,6 +152,7 @@ body {
   grid-area: txt;
   width: 70%;
   text-align: left;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .text-container .btn {

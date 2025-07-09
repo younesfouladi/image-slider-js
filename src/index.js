@@ -53,6 +53,19 @@ let mySlides = [];
       imageWrapper.style.transform = `translateX(${offset}px)`;
       removeActiveClass();
       slides[currentSlide].classList.add("active-slide");
+      // Change title & texts based on active slides
+      (() => {
+        const title = document.querySelector(".game-name");
+        const description = document.querySelector(".game-description");
+        title.style.opacity = "0";
+        description.style.opacity = "0";
+        title.textContent = mySlides[currentSlide].title;
+        description.textContent = mySlides[currentSlide].description;
+        setTimeout(() => {
+          title.style.opacity = "1";
+          description.style.opacity = "1";
+        }, 400);
+      })();
     }
     document.addEventListener("click", (e) => {
       switch (e.target) {
