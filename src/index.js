@@ -32,7 +32,13 @@ let mySlides = [];
   const imageWrapper = document.getElementById("homeImageSlider");
   const slides = imageWrapper.querySelectorAll(".slide");
   const totalSlides = slides.length;
-  const slideWidth = 1000;
+  const slideWidth = (() => {
+    if (screen.width > 400) {
+      return 1000;
+    } else {
+      return screen.width;
+    }
+  })();
   let currentSlide = 2;
   slidesBuilder();
   setImageOnDom();
