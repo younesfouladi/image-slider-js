@@ -136,6 +136,7 @@ body {
   grid-template-areas:
     "head head"
     "txt btn";
+  z-index: 5;
 }
 
 .text-container h1 {
@@ -217,7 +218,7 @@ body {
   }
   .slide {
     width: 100vw;
-    height: 60vh;
+    height: 500px;
   }
 
   .slide img {
@@ -238,7 +239,7 @@ body {
     );
   }
   .text-container {
-    width: 100vw;
+    width: 100%;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     grid-template-areas:

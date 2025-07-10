@@ -45,9 +45,6 @@ let mySlides = [];
   changeBackground();
   // Slide Move by Click
   (function () {
-    const leftSlide = document.querySelector(".left-slide-button");
-    const rightSlide = document.querySelector(".right-slide-button");
-    //
     function moveSlide(direction) {
       // Check if we are on first or last Slide
       currentSlide += direction;
@@ -76,13 +73,11 @@ let mySlides = [];
       })();
     }
     document.addEventListener("click", (e) => {
-      switch (e.target) {
-        case leftSlide:
-          moveSlide(-1);
-          break;
-        case rightSlide:
-          moveSlide(1);
-          break;
+      if (e.target.closest(".left-slide-button")) {
+        moveSlide(-1);
+      }
+      if (e.target.closest(".right-slide-button")) {
+        moveSlide(1);
       }
     });
     setInterval(() => {
