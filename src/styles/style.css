@@ -247,6 +247,7 @@ body {
       "txt"
       "btn";
     row-gap: 0.5rem;
+    pointer-events: none; /* to be able click on switch slide arrow on mobile version */
   }
 
   .text-container h1 {
@@ -264,6 +265,7 @@ body {
     justify-self: center;
     border: 1px solid var(--primary);
     font-weight: 600;
+    pointer-events: auto;
   }
   .switch-slide-container {
     top: 81%;
