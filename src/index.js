@@ -43,6 +43,7 @@ let mySlides = [];
   slidesBuilder();
   setImageOnDom();
   changeBackground();
+  toggleNavbar();
   // Slide Move by Click
   (function () {
     function moveSlide(direction) {
@@ -154,4 +155,19 @@ function changeBackground() {
       }
     });
   }
+}
+
+function toggleNavbar() {
+  const btn = document.querySelector(".show-navbar");
+  const navbar = document.querySelector(".navbar");
+  document.addEventListener("click", (e) => {
+    if (btn.contains(e.target)) {
+      navbar.classList.add("active");
+    } else if (
+      !navbar.contains(e.target) &&
+      navbar.classList.contains("active")
+    ) {
+      navbar.classList.remove("active");
+    }
+  });
 }
