@@ -144,11 +144,13 @@ function removeActiveClass() {
 
 function changeBackground() {
   const slides = document.querySelectorAll(".slide");
-  slides.forEach((slide, index) => {
-    if (slide.classList.contains("active-slide")) {
-      const container = document.getElementById("container");
-      container.style.background = `url("${mySlides[index].imageSrc}")`;
-      container.style.backgroundSize = "cover";
-    }
-  });
+  if (screen.width > 400) {
+    slides.forEach((slide, index) => {
+      if (slide.classList.contains("active-slide")) {
+        const container = document.getElementById("container");
+        container.style.background = `url("${mySlides[index].imageSrc}")`;
+        container.style.backgroundSize = "cover";
+      }
+    });
+  }
 }
