@@ -258,6 +258,8 @@ body {
     height: 100%;
     border-radius: 0;
     object-fit: cover;
+    -webkit-filter: none;
+    filter: none;
   }
 
   .active-slide img {
